@@ -37,17 +37,17 @@ class CRUDEventAdmin(EasyAuditModelAdmin):
                 html = obj.object_repr
         return mark_safe(html)
 
-    object_repr_link.short_description = 'object repr'
+    object_repr_link.short_description = 'Representação do objeto'
 
     def object_json_repr_prettified(self, obj):
         return prettify_json(obj.object_json_repr)
 
-    object_json_repr_prettified.short_description = 'object json repr'
+    object_json_repr_prettified.short_description = 'Representação do objeto JSON'
 
     def changed_fields_prettified(self, obj):
         return prettify_json(obj.changed_fields)
 
-    changed_fields_prettified.short_description = 'changed fields'
+    changed_fields_prettified.short_description = 'Campos alterados'
 
 
 if settings.ADMIN_SHOW_MODEL_EVENTS:
