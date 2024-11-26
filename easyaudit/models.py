@@ -42,8 +42,8 @@ class CRUDEvent(models.Model):
         return self.DELETE == self.event_type
 
     class Meta:
-        verbose_name = 'Evento de CRUD'
-        verbose_name_plural = 'Evento de CRUD'
+        verbose_name = 'Evento do Sistema'
+        verbose_name_plural = 'Eventos do Sistema'
         ordering = ['-datetime']
         index_together = ['object_id', 'content_type', ]
 
