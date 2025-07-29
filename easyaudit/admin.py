@@ -92,7 +92,7 @@ class CRUDEventAdmin(EasyAuditModelAdmin):
     def get_user(self, obj):
         return self.users_by_id.get(obj.user_id)
 
-    @admin.display(description="object repr")
+    @admin.display(description="Representação do objeto")
     def object_repr_link(self, obj):
         if obj.event_type == CRUDEvent.DELETE:
             html = obj.object_repr
@@ -109,11 +109,11 @@ class CRUDEventAdmin(EasyAuditModelAdmin):
                 html = escaped_obj_repr
         return mark_safe(html)  # noqa: S308
 
-    @admin.display(description="object json repr")
+    @admin.display(description="Representação do objeto JSON")
     def object_json_repr_prettified(self, obj):
         return prettify_json(obj.object_json_repr)
 
-    @admin.display(description="changed fields")
+    @admin.display(description="Campos alterados")
     def changed_fields_prettified(self, obj):
         return prettify_json(obj.changed_fields)
 

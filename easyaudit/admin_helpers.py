@@ -39,7 +39,7 @@ class EasyAuditModelAdmin(admin.ModelAdmin):
             return [f.name for f in self.model._meta.get_fields()]
         return self.readonly_fields
 
-    @admin.display(description="User")
+    @admin.display(description="Usuário")
     def user_link(self, obj):
         user = self.users_by_id.get(obj.user_id)
         if user is None:

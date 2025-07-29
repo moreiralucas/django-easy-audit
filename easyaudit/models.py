@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.conf import settings
 from django.contrib.contenttypes.models import ContentType
 from django.db import models
@@ -66,8 +67,10 @@ class CRUDEvent(models.Model):
     datetime = models.DateTimeField(auto_now_add=True, verbose_name=_("Date time"))
 
     class Meta:
-        verbose_name = _("CRUD event")
-        verbose_name_plural = _("CRUD events")
+        verbose_name = 'Evento do Sistema'
+        verbose_name_plural = 'Eventos do Sistema'
+        # verbose_name = _("CRUD event")
+        # verbose_name_plural = _("CRUD events")
         ordering = ["-datetime"]
         indexes = [models.Index(fields=["object_id", "content_type"])]
 
@@ -108,8 +111,10 @@ class LoginEvent(models.Model):
     datetime = models.DateTimeField(auto_now_add=True, verbose_name=_("Date time"))
 
     class Meta:
-        verbose_name = _("login event")
-        verbose_name_plural = _("login events")
+        verbose_name = 'Evento de Login'
+        verbose_name_plural = 'Eventos de Login'
+        # verbose_name = _("login event")
+        # verbose_name_plural = _("login events")
         ordering = ["-datetime"]
 
 
@@ -135,6 +140,8 @@ class RequestEvent(models.Model):
     )
 
     class Meta:
-        verbose_name = _("request event")
-        verbose_name_plural = _("request events")
+        verbose_name = 'Evento de requisição'
+        verbose_name_plural = 'Eventos de requisição'
+        # verbose_name = _("request event")
+        # verbose_name_plural = _("request events")
         ordering = ["-datetime"]
