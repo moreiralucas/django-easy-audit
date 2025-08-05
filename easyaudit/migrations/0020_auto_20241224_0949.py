@@ -4,7 +4,7 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('easyaudit', '0013_auto_20190723_0126'),
+        ('easyaudit', '0019_alter_crudevent_changed_fields_and_more'),
     ]
 
     operations = [
